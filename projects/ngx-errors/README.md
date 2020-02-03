@@ -1,24 +1,70 @@
-# NgxErrors
+# ngx-errors
+Form errors display directives for Angular.
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
+Inspired by [UltimateAngular/ngx-errors](https://github.com/UltimateAngular/ngx-errors)
 
-## Code scaffolding
+## Install
 
-Run `ng generate component component-name --project ngx-errors` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-errors`.
-> Note: Don't forget to add `--project ngx-errors` or else it will be added to the default project in your `angular.json` file. 
+Install via package manager or fork this project ("projects/ngx-errors/src")
 
-## Build
+NPM 
 
-Run `ng build ngx-errors` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+npm install @ildug/ngx-errors
+```
+YARN 
 
-## Publishing
+```
+yarn add @ildug/ngx-errors
+```
 
-After building your library with `ng build ngx-errors`, go to the dist folder `cd dist/ngx-errors` and run `npm publish`.
+## Usage in angular app
 
-## Running unit tests
+Import the module in your angular app. In your module **app.module.ts**
 
-Run `ng test ngx-errors` to execute the unit tests via [Karma](https://karma-runner.github.io).
+``` typescript
+    ...
+    import { NgxErrorsModule } from '@ildug/ngx-errors';
 
-## Further help
+    @NgModule({
+        declarations: [
+            AppComponent,
+        ],
+        imports: [
+            ...
+            NgxErrorsModule,
+            ...
+        ],
+        bootstrap: [AppComponent]
+    })
+    export class AppModule { }
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Form errors display
+
+Add the directive to an element where errors will be diplayed.
+
+**dagErrors** is the *name* of the reference input element.
+
+**dagError** is the error name issued by  *Angular Validator* 
+
+**when** indicates when the error message will be shown.
+
+In **my.component.html**
+
+``` html
+<form >
+    ...
+    <div class="my-input-container">
+
+        <input name="myinputname" type="email">
+
+        <div dagErrors="myinputname" class="error" required >
+            <div dagError="required" when="touched"> Please, insert a value</div>
+            <div dagError="email" when="touched"> Ops, incorrect email format</div>
+        </div>
+
+    </div>
+    ...
+</form>
+```

@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
-import { NgxErrorsComponent } from './ngx-errors.component';
+import { CommonModule } from '@angular/common';
+import { NgxErrorsDirective } from './errors.directive';
+import { NgxErrorDirective } from './error.directive';
 
 
 
 @NgModule({
-  declarations: [NgxErrorsComponent],
+  declarations: [ NgxErrorsDirective, NgxErrorDirective],
   imports: [
+      CommonModule
   ],
-  exports: [NgxErrorsComponent]
+  exports: [NgxErrorsDirective, NgxErrorDirective]
 })
 export class NgxErrorsModule { }

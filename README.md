@@ -24,7 +24,7 @@ Import the module in your angular app. In your module **app.module.ts**
 
 ``` typescript
     ...
-    import { NgxDragdropModule } from '@ildug/ngx-dragdrop';
+    import { NgxErrorsModule } from '@ildug/ngx-errors';
 
     @NgModule({
         declarations: [
@@ -32,7 +32,7 @@ Import the module in your angular app. In your module **app.module.ts**
         ],
         imports: [
             ...
-            NgxDragdropModule,
+            NgxErrorsModule,
             ...
         ],
         bootstrap: [AppComponent]
@@ -40,13 +40,31 @@ Import the module in your angular app. In your module **app.module.ts**
     export class AppModule { }
 ```
 
-### dagDrag
+### Form errors display
 
-Add the directive to an element to give it the *draggable* behaviour. Then assign a value to an element witch will be dragged.
+Add the directive to an element where errors will be diplayed.
 
+**dagErrors** is the *name* of the reference input element.
+
+**dagError** is the error name issued by  *Angular Validator* 
+
+**when** indicates when the error message will be shown.
 
 In **my.component.html**
 
 ``` html
-<div [dagDrag]="item" > drag me </div>
+<form >
+    ...
+    <div class="my-input-container">
+
+        <input name="myinputname" type="email">
+
+        <div dagErrors="myinputname" class="error" required >
+            <div dagError="required" when="touched"> Please, insert a value</div>
+            <div dagError="email" when="touched"> Ops, incorrect email format</div>
+        </div>
+
+    </div>
+    ...
+</form>
 ```

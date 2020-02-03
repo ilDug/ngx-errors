@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+
+    <div class="my-input-container">
+
+        <input formControlName="email" type="email">
+
+        <div dagErrors="email" class="error">
+            <div dagError="required" when="touched"> Please, insert a value</div>
+            <div dagError="email" when="touched"> Ops, incorrect email format</div>
+        </div>
+
+    </div>
+    <p>
+        {{form.controls.email.errors | json}}
+    </p>
+</form>
