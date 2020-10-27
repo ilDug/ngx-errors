@@ -1,6 +1,8 @@
 # ngx-errors
 Form errors display directives for Angular.
 
+Updated to Angular 10.
+
 Inspired by [UltimateAngular/ngx-errors](https://github.com/UltimateAngular/ngx-errors)
 
 ## Install
