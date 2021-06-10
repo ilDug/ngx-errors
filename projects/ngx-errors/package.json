@@ -1,6 +1,10 @@
 {
   "name": "@ildug/ngx-errors",
+<<<<<<< HEAD
+  "version": "2.1.0",
+=======
   "version": "1.0.1",
+>>>>>>> 926336531a2cc81c820a2ff2bfe79d660f00a92c
   "description": "Form errors display directives for Angular",
   "repository": {
     "type": "git",
@@ -13,6 +17,15 @@
   },
   "homepage": "https://github.com/ilDug/ngx-errors#readme",
   "peerDependencies": {
+<<<<<<< HEAD
+    "@angular/common": "^12.0.4",
+    "@angular/core": "^12.0.4"
+  },
+  "dependencies": {
+    "tslib": "^2.1.0"
+  }
+}
+=======
     "@angular/common": "^10.1.6",
     "@angular/core": "^10.1.6"
   },
@@ -20,3 +33,4 @@
     "tslib": "^2.0.0"
   }
 }
+>>>>>>> 926336531a2cc81c820a2ff2bfe79d660f00a92c

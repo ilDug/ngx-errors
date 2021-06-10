@@ -5,6 +5,10 @@
     "declarationMap": false
   },
   "angularCompilerOptions": {
+<<<<<<< HEAD
+    "compilationMode": "partial"
+=======
     "enableIvy": false
+>>>>>>> 926336531a2cc81c820a2ff2bfe79d660f00a92c
   }
 }

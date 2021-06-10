@@ -3,6 +3,8 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
+=======
     "ngx-errors": {
       "projectType": "library",
       "root": "projects/ngx-errors",
@@ -43,6 +45,7 @@
         }
       }
     },
+>>>>>>> 926336531a2cc81c820a2ff2bfe79d660f00a92c
     "showcase": {
       "projectType": "application",
       "schematics": {
@@ -62,9 +65,12 @@
           "skipTests": true
         },
         "@schematics/angular:interceptor": {
+<<<<<<< HEAD
+=======
           "skipTests": true
         },
         "@schematics/angular:module": {
+>>>>>>> 926336531a2cc81c820a2ff2bfe79d660f00a92c
           "skipTests": true
         },
         "@schematics/angular:pipe": {
@@ -72,6 +78,9 @@
         },
         "@schematics/angular:service": {
           "skipTests": true
+        },
+        "@schematics/angular:application": {
+          "strict": true
         }
       },
       "root": "projects/showcase",
@@ -86,7 +95,11 @@
             "main": "projects/showcase/src/main.ts",
             "polyfills": "projects/showcase/src/polyfills.ts",
             "tsConfig": "projects/showcase/tsconfig.app.json",
+<<<<<<< HEAD
+            "inlineStyleLanguage": "scss",
+=======
             "aot": true,
+>>>>>>> 926336531a2cc81c820a2ff2bfe79d660f00a92c
             "assets": [
               "projects/showcase/src/favicon.ico",
               "projects/showcase/src/assets"
@@ -98,6 +111,8 @@
           },
           "configurations": {
             "production": {
+<<<<<<< HEAD
+=======
               "fileReplacements": [
                 {
                   "replace": "projects/showcase/src/environments/environment.ts",
@@ -112,39 +127,105 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+>>>>>>> 926336531a2cc81c820a2ff2bfe79d660f00a92c
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
-              ]
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/showcase/src/environments/environment.ts",
+                  "with": "projects/showcase/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+<<<<<<< HEAD
+          "configurations": {
+            "production": {
+              "browserTarget": "showcase:build:production"
+            },
+            "development": {
+              "browserTarget": "showcase:build:development"
+=======
           "options": {
             "browserTarget": "showcase:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "showcase:build:production"
+>>>>>>> 926336531a2cc81c820a2ff2bfe79d660f00a92c
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "showcase:build"
           }
+<<<<<<< HEAD
+        }
+      }
+    },
+    "ngx-errors": {
+      "projectType": "library",
+      "root": "projects/ngx-errors",
+      "sourceRoot": "projects/ngx-errors/src",
+      "prefix": "err",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-errors/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-errors/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-errors/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-errors/src/test.ts",
+            "tsConfig": "projects/ngx-errors/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-errors/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "showcase"
+=======
         }
       }
     }},
   "defaultProject": "ngx-errors"
+>>>>>>> 926336531a2cc81c820a2ff2bfe79d660f00a92c
 }

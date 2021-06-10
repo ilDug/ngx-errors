@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 # ngx-errors
 Form errors display directives for Angular.
 
@@ -74,3 +76,4 @@ In **my.component.html**
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+>>>>>>> 926336531a2cc81c820a2ff2bfe79d660f00a92c

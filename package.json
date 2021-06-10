@@ -1,4 +1,19 @@
 {
+<<<<<<< HEAD
+  "name": "@ildug/ngx-errors",
+  "version": "2.1.0",
+  "description": "Form errors display directives for Angular",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilDug/ngx-errors.git"
+  },
+  "author": "ilDug",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ilDug/ngx-errors/issues"
+  },
+  "homepage": "https://github.com/ilDug/ngx-errors#readme",
+=======
     "name": "@ildug/ngx-errors",
     "version": "1.0.1",
     "description": "Form errors display directives for Angular",
@@ -12,10 +27,35 @@
         "url": "https://github.com/ilDug/ngx-errors/issues"
     },
     "homepage": "https://github.com/ilDug/ngx-errors#readme",
+>>>>>>> 926336531a2cc81c820a2ff2bfe79d660f00a92c
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+<<<<<<< HEAD
+    "watch": "ng build --watch --configuration development"
+  },
+  "dependencies": {
+    "@angular/animations": "~12.0.3",
+    "@angular/common": "~12.0.3",
+    "@angular/compiler": "~12.0.3",
+    "@angular/core": "~12.0.3",
+    "@angular/forms": "~12.0.3",
+    "@angular/platform-browser": "~12.0.3",
+    "@angular/platform-browser-dynamic": "~12.0.3",
+    "@angular/router": "~12.0.3",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.1.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~12.0.3",
+    "@angular/cli": "~12.0.3",
+    "@angular/compiler-cli": "~12.0.3",
+    "@types/node": "^12.11.1",
+    "ng-packagr": "^12.0.0",
+    "typescript": "~4.2.3"
+=======
     "test": "ng test",
     "lint": "ng lint"
   },
@@ -41,5 +81,6 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
+>>>>>>> 926336531a2cc81c820a2ff2bfe79d660f00a92c
   }
 }
