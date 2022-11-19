@@ -1,24 +1,76 @@
-# NgxErrors
+# ngx-errors
+Form errors display directives for Angular.
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+Updated to Angular 12.
 
-## Code scaffolding
+Inspired by [UltimateAngular/ngx-errors](https://github.com/UltimateAngular/ngx-errors)
 
-Run `ng generate component component-name --project ngx-errors` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-errors`.
-> Note: Don't forget to add `--project ngx-errors` or else it will be added to the default project in your `angular.json` file. 
+## Install
 
-## Build
+Install via package manager or fork this project ("projects/ngx-errors/src")
 
-Run `ng build ngx-errors` to build the project. The build artifacts will be stored in the `dist/` directory.
+NPM 
 
-## Publishing
+```
+npm install @ildug/ngx-errors
+```
+YARN 
 
-After building your library with `ng build ngx-errors`, go to the dist folder `cd dist/ngx-errors` and run `npm publish`.
+```
+yarn add @ildug/ngx-errors
+```
 
-## Running unit tests
+## Usage in angular app
 
-Run `ng test ngx-errors` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Import the module in your angular app. In your module **app.module.ts**
+
+``` typescript
+    ...
+    import { NgxErrorsModule } from '@ildug/ngx-errors';
+
+    @NgModule({
+        declarations: [
+            AppComponent,
+        ],
+        imports: [
+            ...
+            NgxErrorsModule,
+            ...
+        ],
+        bootstrap: [AppComponent]
+    })
+    export class AppModule { }
+```
+
+### Form errors display
+
+Add the directive to an element where errors will be diplayed.
+
+**dagErrors** is the *name* of the reference input element.
+
+**dagError** is the error name issued by  *Angular Validator* 
+
+**when** indicates when the error message will be shown.
+
+In **my.component.html**
+
+``` html
+<form >
+    ...
+    <div class="my-input-container">
+
+        <input name="myinputname" type="email">
+
+        <div dagErrors="myinputname" class="error" required >
+            <div dagError="required" when="touched"> Please, insert a value</div>
+            <div dagError="email" when="touched"> Ops, incorrect email format</div>
+        </div>
+
+    </div>
+    ...
+</form>
+```
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
