@@ -21,6 +21,7 @@
       "ngx-errors": [
         "projects/ngx-errors/src/public-api.ts",
         "dist/ngx-errors/ngx-errors",
+        "dist/ngx-errors",
         "dist/ngx-errors"
       ]
     },
