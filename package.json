@@ -1,6 +1,17 @@
 {
-  "name": "ngx-errors",
-  "version": "0.0.0",
+  "name": "@ildug/ngx-errors",
+  "version": "2.2.0",
+  "description": "Form errors display directives for Angular",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilDug/ngx-errors.git"
+  },
+  "author": "ilDug",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ilDug/ngx-errors/issues"
+  },
+  "homepage": "https://github.com/ilDug/ngx-errors#readme",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
