@@ -1,10 +1,11 @@
 # ngx-errors
 
 [![Publish Node.js Package](https://github.com/ilDug/ngx-errors/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/ilDug/ngx-errors/actions/workflows/npm-publish.yml)
+[![Build and Test](https://github.com/ilDug/ngx-errors/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/ilDug/ngx-errors/actions/workflows/build%20and%20test.yml)
 
 Form errors display directives for Angular.
 
-Updated to Angular 12.
+Updated to Angular 16.
 
 Inspired by [UltimateAngular/ngx-errors](https://github.com/UltimateAngular/ngx-errors)
 
@@ -16,11 +17,6 @@ NPM
 
 ```
 npm install @ildug/ngx-errors
-```
-YARN 
-
-```
-yarn add @ildug/ngx-errors
 ```
 
 ## Usage in angular app
