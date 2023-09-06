@@ -23,8 +23,6 @@ export class NgxErrorDirective implements OnInit, DoCheck, OnDestroy {
     constructor(@Inject(forwardRef(() => NgxErrorsDirective)) private dagErrors: NgxErrorsDirective) { }
 
 
-
-
     ngOnInit() {
         this._states = new Subject<string[]>();
         this.states = this._states
@@ -40,7 +38,7 @@ export class NgxErrorDirective implements OnInit, DoCheck, OnDestroy {
             map(states => this.rules.every(rule => !!~states.indexOf(rule)))
         )
 
-        this.subscription = combineLatest(states, errors)
+        this.subscription = combineLatest([states, errors])
             .subscribe(([states, errors]) => {
                 this.hidden = !(states && errors.control.hasError(errors.errorName));
             });
