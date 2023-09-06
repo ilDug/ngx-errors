@@ -1,6 +1,7 @@
 # ngx-errors
 
 [![Publish Node.js Package](https://github.com/ilDug/ngx-errors/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/ilDug/ngx-errors/actions/workflows/npm-publish.yml)
+[![Build and Test](https://github.com/ilDug/ngx-errors/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/ilDug/ngx-errors/actions/workflows/build%20and%20test.yml)
 
 Form errors display directives for Angular.
 
