@@ -1,6 +1,6 @@
 {
   "name": "@ildug/ngx-errors",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "Form errors display directives for Angular",
   "repository": {
     "type": "git",
