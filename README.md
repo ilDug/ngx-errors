@@ -9,6 +9,8 @@ Updated to Angular 16.
 
 Inspired by [UltimateAngular/ngx-errors](https://github.com/UltimateAngular/ngx-errors)
 
+try a [demo](https://ildug.github.io/ngx-errors/)
+
 ## Install
 
 Install via package manager or fork this project ("projects/ngx-errors/src")
