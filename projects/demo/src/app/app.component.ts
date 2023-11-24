@@ -4,9 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styles: [
-        `.error{color:red;}`
-    ]
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
     form: FormGroup;

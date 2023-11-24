@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgxErrorsModule } from 'ngx-errors';
 
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -12,7 +15,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    NgxErrorsModule
+    NgxErrorsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
