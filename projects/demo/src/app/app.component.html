@@ -8,11 +8,7 @@
     <div id="github">
         <a href="https://github.com/ilDug/ngx-errors">
             <span>
-                <img
-                    src="assets/github.svg"
-                    alt="fork me on github"
-                    title="fork me on github"
-                />
+                <img src="github.svg" alt="fork me on github" title="fork me on github" />
             </span>
         </a>
     </div>
@@ -20,18 +16,14 @@
     <div class="example">
         <form [formGroup]="form">
             <div class="">
-                <mat-form-field >
+                <mat-form-field>
                     <mat-label>email</mat-label>
                     <input matInput formControlName="email" type="email" />
                 </mat-form-field>
 
                 <div dagErrors="email" class="error">
-                    <div dagError="required" when="touched">
-                        Please, insert a value
-                    </div>
-                    <div dagError="email" when="touched">
-                        Ops, incorrect email format
-                    </div>
+                    <div dagError="required" when="touched">Please, insert a value</div>
+                    <div dagError="email" when="touched">Ops, incorrect email format</div>
                 </div>
             </div>
 

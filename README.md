@@ -5,7 +5,7 @@
 
 Form errors display directives for Angular.
 
-Updated to Angular 16.
+Updated to Angular 18.
 
 Inspired by [UltimateAngular/ngx-errors](https://github.com/UltimateAngular/ngx-errors)
 
@@ -23,7 +23,7 @@ npm install @ildug/ngx-errors
 
 ## Usage in angular app
 
-Import the module in your angular app. In your module **app.module.ts**
+Import the module in your angular component. In your module **app.module.ts**
 
 ``` typescript
     ...
