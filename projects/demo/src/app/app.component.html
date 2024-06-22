@@ -27,9 +27,11 @@
                 </div>
             </div>
 
-            <pre>
+            <pre style="padding: 1rem;">
                 <code>
-                    {{ form.controls.email.errors | json }}
+{{ form.controls.email.errors | json }}
+
+touched: {{ form.controls.email.touched }}
                 </code>
             </pre>
         </form>
