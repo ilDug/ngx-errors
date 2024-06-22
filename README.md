@@ -7,8 +7,6 @@ Form errors display directives for Angular.
 
 Updated to Angular 18.
 
-Inspired by [UltimateAngular/ngx-errors](https://github.com/UltimateAngular/ngx-errors)
-
 try a [demo](https://ildug.github.io/ngx-errors/)
 
 ## Install
@@ -27,20 +25,18 @@ Import the module in your angular component. In your module **app.module.ts**
 
 ``` typescript
     ...
-    import { NgxErrorsModule } from '@ildug/ngx-errors';
+@Component({
+    ...,
+    standalone: true,
+    imports: [..., ReactiveFormsModule, NgxErrorsModule],
+    ...
+})
+export class AppComponent {
+    form = new FormGroup({
+        "email": new FormControl(null, [Validators.required, Validators.email])
+    });
+}
 
-    @NgModule({
-        declarations: [
-            AppComponent,
-        ],
-        imports: [
-            ...
-            NgxErrorsModule,
-            ...
-        ],
-        bootstrap: [AppComponent]
-    })
-    export class AppModule { }
 ```
 
 ### Form errors display
@@ -56,15 +52,16 @@ Add the directive to an element where errors will be diplayed.
 In **my.component.html**
 
 ``` html
-<form >
+<form [formGroup]="form" >
     ...
     <div class="my-input-container">
 
-        <input name="myinputname" type="email">
+        <input type="email" formControlName="email">
 
-        <div dagErrors="myinputname" class="error" required >
+        <div dagErrors="email" class="error">
             <div dagError="required" when="touched"> Please, insert a value</div>
             <div dagError="email" when="touched"> Ops, incorrect email format</div>
+            <div dagError="otherError" [when]="[dirty, pristine]"> always show this message when otherError is present</div>
         </div>
 
     </div>
@@ -72,6 +69,3 @@ In **my.component.html**
 </form>
 ```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
