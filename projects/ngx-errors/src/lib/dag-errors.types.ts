@@ -7,4 +7,8 @@ export interface ErrorDetails {
     errorName: string
 }
 
-export const toArray = (value: ErrorOptions): string[] => Array.isArray(value) ? value : [value];
+export const toArray = (value: string | string[] ): string[] => Array.isArray(value) ? value : [value];
+
+
+export  const DagErrorsControlStates = ['touched', 'untouched', 'pristine', 'dirty'];
+export type DagErrorsControlState = 'touched' | 'untouched' | 'pristine' | 'dirty';
