@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy Github Pages
 
 on:
 
@@ -49,14 +49,14 @@ jobs:
           npm run build:pages
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload the build dist directory (DAG)
           # set the dist destination folder (where angular puts the built files)
-          path: "./dist/demo/"
+          path: "./dist/demo/browser/"
 
       - name: Deploy to GitHub Pages
         id: deployment
