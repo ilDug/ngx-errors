@@ -7,14 +7,15 @@ import { map } from 'rxjs/operators'
     selector: '[dagError]',
     standalone: true,
     host: {
-        '[hidden]': 'hidden()'
+        '[hidden]': 'hidden'
     }
 })
 export class NgxErrorDirective implements AfterViewInit {
 
     on = input.required<string>({ alias: 'dagError' });
     when = input<string | string[]>(['pristine', 'dirty']);
-    hidden = signal(true);
+    hidden: boolean = true;
+    // hidden = signal(true);
 
     private parent = inject<NgxErrorsDirective>(forwardRef(() => NgxErrorsDirective));
 
@@ -28,8 +29,7 @@ export class NgxErrorDirective implements AfterViewInit {
                     toArray(this.when()).some(w => this.parent.control()[w])
                 ),
             )
-            .subscribe(show => this.hidden.set(!show))
-
+            .subscribe(show => this.hidden = !show)
     }
 
 }

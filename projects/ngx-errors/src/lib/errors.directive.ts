@@ -25,7 +25,7 @@ export class NgxErrorsDirective implements AfterViewInit {
                 takeUntilDestroyed(this.destroyRef),
                 distinctUntilChanged(),
             )
-            .subscribe(e => this.events$.next(e) )
+            .subscribe(e => this.events$.next(e))
     }
 
 }
